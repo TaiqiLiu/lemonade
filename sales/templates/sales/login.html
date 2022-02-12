@@ -1,0 +1,19 @@
+<body  bgcolor="#ebf7fc">
+
+<h1>Login page</h1>
+<form action='' method="post">
+    {% csrf_token %}
+    <p>
+        Username:
+        <input type="text" name="username">
+    </p>
+    <p>
+        Password:
+        <input type="text" name="password">
+    </p>
+    <p>
+        <input type="submit" value="login">
+    </p>
+    <hr>
+</form>
+</body>

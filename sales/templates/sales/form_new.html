@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <form action="/sales/form" method="post" novalidate autocomplete="off">
+        {% csrf_token %}
+        <div>
+            <label for="{{ form_obj.name.id_for_label }}">{{ form_obj.name.label }}</label>
+            {{ form_obj.name }} {{ form_obj.name.errors.0 }}
+        </div>
+        <div>
+            <label for="{{ form_obj.beverage.id_for_label }}">{{ form_obj.beverage.label }}</label>
+            {{ form_obj.beverage }} {{ form_obj.beverage.errors.0 }}
+        </div>
+        <div>
+            <label for="{{ form_obj.quantity.id_for_label }}">{{ form_obj.quantity.label }}</label>
+            {{ form_obj.quantity }} {{ form_obj.quantity.errors.0 }}
+        </div>
+        
+        
+        
+        
+        
+        <div>
+            <input type="submit" class="btn btn-success" value="注册">
+        </div>
+    </form>
+</body>
+</html>

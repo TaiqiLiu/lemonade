@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> report </title>
+</head>
+<body  bgcolor="#ebf7fc">
+    <form action="/sales/form/" method="post">
+        {% csrf_token %}
+        
+        Name:<input type="text" name="name" value=""/>
+        <hr/>
+        Beverage:<input type="text" name="beverage" value=""/>
+        <hr/>
+        Quantity of sale:<input type="text" name="quantity" value=""/>
+        <hr/>
+    <input type="submit" value="submit"/>    
+    <span style="color:red;">{{ error_msg }}</span>
+    </form>
+    <p></p> 
+    <a href="/sales/report/">Go to report</a>
+    <p></p> 
+    <a href="/sales">Go to index</a>
+
+</body>
+</html>
